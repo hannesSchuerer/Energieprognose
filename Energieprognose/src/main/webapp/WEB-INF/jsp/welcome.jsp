@@ -3,6 +3,6 @@
 		<title>Energieprognose</title>
 	</head>
 	<body>
-		<h1>Energieprognose</h1>
+		<h1>Energieprognose${loder}</h1>
 	</body>
 </html>

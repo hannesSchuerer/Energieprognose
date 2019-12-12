@@ -475,3 +475,297 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-05 15:43:37.934
 !MESSAGE executing callback sts4.classpath.mslHZtaD SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-05 16:01:39.571
+!MESSAGE Preparing classpath changed notification ReadWebStream
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-05 16:01:39.583
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-05 16:01:39.590
+!MESSAGE classpath=24 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-05 16:01:39.597
+!MESSAGE buffering callback sts4.classpath.mslHZtaD ReadWebStream false 24
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-05 16:01:39.603
+!MESSAGE executing callback sts4.classpath.mslHZtaD 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-05 16:01:39.615
+!MESSAGE executing callback sts4.classpath.mslHZtaD SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-05 16:01:42.801
+!MESSAGE Preparing classpath changed notification ReadWebStream
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-05 16:01:42.830
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-05 16:01:42.846
+!MESSAGE classpath=79 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-05 16:01:42.856
+!MESSAGE buffering callback sts4.classpath.mslHZtaD ReadWebStream false 79
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-05 16:01:42.864
+!MESSAGE executing callback sts4.classpath.mslHZtaD 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-05 16:01:42.874
+!MESSAGE executing callback sts4.classpath.mslHZtaD SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-05 16:27:13.183
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.mslHZtaD
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-05 16:27:13.190
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.mslHZtaD
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-05 16:27:13.198
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-05 16:27:13.205
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.mslHZtaD => OK
+!SESSION 2019-12-12 14:22:05.782 -----------------------------------------------
+eclipse.buildId=4.12.0.I20190605-1800
+java.version=1.8.0_161
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=de_DE
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.core 1 0 2019-12-12 14:22:20.244
+!MESSAGE Using Apache MINA sshd as ssh client.
+
+!ENTRY org.eclipse.jface 2 0 2019-12-12 14:22:21.645
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2019-12-12 14:22:21.645
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@366b4a7b,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@a251135,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-12 14:22:39.711
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-12 14:22:39.776
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@468dbd07[org.springframework.tooling.boot.ls:1.13.0.201911200938(id=571)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-12 14:22:39.848
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-12-12 14:22:40.400
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\User'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-12 14:22:40.600
+!MESSAGE Instantiating ReusableClasspathListenerHandler
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-12 14:22:55.618
+!MESSAGE Boot LS startup time from start to initialized: 15730ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-12 14:22:55.701
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.KxbdWCTbisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-12 14:22:55.713
+!MESSAGE subscribing to classpath changes: sts4.classpath.KxbdWCTb isBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-12 14:22:55.728
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-12 14:22:55.743
+!MESSAGE subsribers = {sts4.classpath.KxbdWCTb=Send Classpath Notifications(819)}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-12 14:22:55.754
+!MESSAGE Sending initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-12 14:22:55.760
+!MESSAGE project Energieprognose ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-12 14:22:55.780
+!MESSAGE project ReadWebStream ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-12 14:22:55.787
+!MESSAGE Preparing classpath changed notification Energieprognose
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-12 14:22:55.801
+!MESSAGE Sending initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-12 14:22:55.807
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-12 14:22:55.821
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.KxbdWCTb => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-12 14:22:55.853
+!MESSAGE classpath=90 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-12 14:22:55.865
+!MESSAGE buffering callback sts4.classpath.KxbdWCTb Energieprognose false 90
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-12 14:22:55.879
+!MESSAGE Preparing classpath changed notification ReadWebStream
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-12 14:22:55.890
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-12 14:22:55.912
+!MESSAGE classpath=79 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-12 14:22:55.926
+!MESSAGE buffering callback sts4.classpath.KxbdWCTb ReadWebStream false 79
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-12 14:22:55.932
+!MESSAGE executing callback sts4.classpath.KxbdWCTb 2 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-12 14:22:56.024
+!MESSAGE executing callback sts4.classpath.KxbdWCTb SUCCESS [done]
+
+!ENTRY org.eclipse.ui 2 2 2019-12-12 14:40:23.067
+!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-12 14:49:00.764
+!MESSAGE Preparing classpath changed notification Energieprognose
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-12 14:49:00.783
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-12 14:49:00.794
+!MESSAGE classpath=91 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-12 14:49:00.804
+!MESSAGE buffering callback sts4.classpath.KxbdWCTb Energieprognose false 91
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-12 14:49:00.811
+!MESSAGE executing callback sts4.classpath.KxbdWCTb 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-12 14:49:00.827
+!MESSAGE executing callback sts4.classpath.KxbdWCTb SUCCESS [done]
+
+!ENTRY org.eclipse.lsp4e 4 0 2019-12-12 14:49:02.478
+!MESSAGE 
+!STACK 0
+java.lang.InterruptedException
+	at java.util.concurrent.CompletableFuture.reportGet(Unknown Source)
+	at java.util.concurrent.CompletableFuture.get(Unknown Source)
+	at org.springframework.tooling.boot.ls.jdt.LSPTextHover.getHoverInfo(LSPTextHover.java:109)
+	at org.springframework.tooling.boot.ls.jdt.SpringBootJavaHoverProvider.getHoverInfo2(SpringBootJavaHoverProvider.java:42)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:167)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:133)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:169)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-12 15:08:35.945
+!MESSAGE Preparing classpath changed notification ReadWebStream
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-12 15:08:35.954
+!MESSAGE exists = false open = true => deleted = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-12 15:08:35.967
+!MESSAGE buffering callback sts4.classpath.KxbdWCTb ReadWebStream true 0
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-12 15:08:35.973
+!MESSAGE executing callback sts4.classpath.KxbdWCTb 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-12 15:08:35.998
+!MESSAGE executing callback sts4.classpath.KxbdWCTb SUCCESS [done]
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2019-12-12 15:08:36.982
+!MESSAGE Launch configuration ReadWebStreamApplication references non-existing project ReadWebStream.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Launch configuration ReadWebStreamApplication references non-existing project ReadWebStream.
+	at org.eclipse.jdt.launching.JavaRuntime.abort(JavaRuntime.java:1838)
+	at org.eclipse.jdt.launching.JavaRuntime.getJavaProject(JavaRuntime.java:1713)
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.updateLaunchConfiguration(MavenLaunchConfigurationListener.java:53)
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.launchConfigurationChanged(MavenLaunchConfigurationListener.java:38)
+	at org.eclipse.debug.internal.core.LaunchManager$ConfigurationNotifier.run(LaunchManager.java:225)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.internal.core.LaunchManager$ConfigurationNotifier.notify(LaunchManager.java:209)
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy.setDirty(LaunchConfigurationWorkingCopy.java:528)
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy.setAttribute(LaunchConfigurationWorkingCopy.java:416)
+	at org.eclipse.m2e.jdt.internal.launch.MavenRuntimeClasspathProvider.disable(MavenRuntimeClasspathProvider.java:352)
+	at org.eclipse.m2e.jdt.internal.launch.MavenRuntimeClasspathProvider.disable(MavenRuntimeClasspathProvider.java:378)
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.mavenProjectChanged(MavenLaunchConfigurationListener.java:70)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.notifyProjectChangeListeners(ProjectRegistryManager.java:825)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.applyMutableProjectRegistry(ProjectRegistryManager.java:989)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryRefreshJob.lambda$0(ProjectRegistryRefreshJob.java:147)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:177)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:151)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:99)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1374)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryRefreshJob.run(ProjectRegistryRefreshJob.java:82)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.jdt.launching 4 107 2019-12-12 15:08:36.983
+!MESSAGE Launch configuration ReadWebStreamApplication references non-existing project ReadWebStream.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2019-12-12 15:08:36.991
+!MESSAGE Launch configuration ReadWebStreamApplication references non-existing project ReadWebStream.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Launch configuration ReadWebStreamApplication references non-existing project ReadWebStream.
+	at org.eclipse.jdt.launching.JavaRuntime.abort(JavaRuntime.java:1838)
+	at org.eclipse.jdt.launching.JavaRuntime.getJavaProject(JavaRuntime.java:1713)
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.updateLaunchConfiguration(MavenLaunchConfigurationListener.java:53)
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.launchConfigurationChanged(MavenLaunchConfigurationListener.java:38)
+	at org.eclipse.debug.internal.core.LaunchManager$ConfigurationNotifier.run(LaunchManager.java:225)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.internal.core.LaunchManager$ConfigurationNotifier.notify(LaunchManager.java:209)
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy.setDirty(LaunchConfigurationWorkingCopy.java:528)
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy.setAttribute(LaunchConfigurationWorkingCopy.java:416)
+	at org.eclipse.m2e.jdt.internal.launch.MavenRuntimeClasspathProvider.disable(MavenRuntimeClasspathProvider.java:353)
+	at org.eclipse.m2e.jdt.internal.launch.MavenRuntimeClasspathProvider.disable(MavenRuntimeClasspathProvider.java:378)
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.mavenProjectChanged(MavenLaunchConfigurationListener.java:70)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.notifyProjectChangeListeners(ProjectRegistryManager.java:825)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.applyMutableProjectRegistry(ProjectRegistryManager.java:989)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryRefreshJob.lambda$0(ProjectRegistryRefreshJob.java:147)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:177)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:151)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:99)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1374)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryRefreshJob.run(ProjectRegistryRefreshJob.java:82)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.jdt.launching 4 107 2019-12-12 15:08:36.991
+!MESSAGE Launch configuration ReadWebStreamApplication references non-existing project ReadWebStream.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2019-12-12 15:08:37.005
+!MESSAGE Launch configuration ReadWebStreamApplication references non-existing project ReadWebStream.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Launch configuration ReadWebStreamApplication references non-existing project ReadWebStream.
+	at org.eclipse.jdt.launching.JavaRuntime.abort(JavaRuntime.java:1838)
+	at org.eclipse.jdt.launching.JavaRuntime.getJavaProject(JavaRuntime.java:1713)
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.updateLaunchConfiguration(MavenLaunchConfigurationListener.java:53)
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.launchConfigurationChanged(MavenLaunchConfigurationListener.java:38)
+	at org.eclipse.debug.internal.core.LaunchManager$ConfigurationNotifier.run(LaunchManager.java:225)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.internal.core.LaunchManager$ConfigurationNotifier.notify(LaunchManager.java:209)
+	at org.eclipse.debug.internal.core.LaunchManager.launchConfigurationChanged(LaunchManager.java:2151)
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy.writeNewFile(LaunchConfigurationWorkingCopy.java:381)
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy.doSave0(LaunchConfigurationWorkingCopy.java:258)
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy.doSave(LaunchConfigurationWorkingCopy.java:228)
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy.doSave(LaunchConfigurationWorkingCopy.java:186)
+	at org.eclipse.m2e.jdt.internal.launch.MavenRuntimeClasspathProvider.disable(MavenRuntimeClasspathProvider.java:354)
+	at org.eclipse.m2e.jdt.internal.launch.MavenRuntimeClasspathProvider.disable(MavenRuntimeClasspathProvider.java:378)
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.mavenProjectChanged(MavenLaunchConfigurationListener.java:70)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.notifyProjectChangeListeners(ProjectRegistryManager.java:825)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.applyMutableProjectRegistry(ProjectRegistryManager.java:989)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryRefreshJob.lambda$0(ProjectRegistryRefreshJob.java:147)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:177)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:151)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:99)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1374)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryRefreshJob.run(ProjectRegistryRefreshJob.java:82)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.jdt.launching 4 107 2019-12-12 15:08:37.006
+!MESSAGE Launch configuration ReadWebStreamApplication references non-existing project ReadWebStream.
