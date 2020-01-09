@@ -66,8 +66,7 @@ public class ExampleClient extends WebSocketClient {
 
 	public void onMessage( String message ) {
 
-		data = message;
-		//System.out.println( "received: " + message );
+		System.out.println( "received: " + message );
 
 	}
 
@@ -103,7 +102,6 @@ public class ExampleClient extends WebSocketClient {
 		ExampleClient c = new ExampleClient( new URI( "ws://10.210.0.240:8000" )); // more about drafts here: http://github.com/TooTallNate/Java-WebSocket/wiki/Drafts
 		c.setConnectionLostTimeout( 0 );
 		c.connect();
-		
 	}
 
 
