@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Notification</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<style type="text/css">
+th {
+	background: steelblue;
+	height: 44px;
+	width: 7%;
+	font-weight: lighter;
+	text-shadow: 0 1px 0 #38678f;
+	color: white;
+	border: 1px solid #38678f;
+	box-shadow: inset 0px 1px 2px #568ebd;
+	transition: all 0.2s;
+	width: 7%;
+}
+
+td {
+	border-right: 1px solid #cccccc;
+	padding: 10px;
+	transition: all 0.2s;
+	text-align: center;
+	width: 22%;
+	border: 1px solid rgba(68, 125, 147, 0.3);
+}
+
+p {
+	color: blue;
+}
+</style>
+</head>
+<body>
+	<div align="center">
+		<img src="pulpitrock.jpg" th:src="'cid:' + ${imageResourceName}"
+			height="150" width="100%" />
+	</div>
+	<P>Dear User,</P>
+	<p
+		th:text="'Your current search on date '+${weather.searchDate}+'-'+${weather.time}+' Forecast status:'">)</p>
+	<div class='main' style="max-width: 553px; padding: 0px; margin: left;">
+		<table class="heavyTable"
+			style="width: 90%; max-width: 500px; height: 93px; border-collapse: collapse; border: 1px solid #38678f; margin: 25px 0 0 25px; background: #eef2f5; border: 1; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); animation: float 5s infinite; text-align: center;">
+			<thead>
+				<tr>
+					<th>CITY</th>
+					<th>STATE</th>
+					<th>COUNTRY</th>
+					<th>CCD</th>
+					<th>LATTITUDE</th>
+					<th>LANGITUDE</th>
+					<th>ELEVATION</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td th:text="${location.city}"></td>
+					<td th:text="${location.state}"></td>
+					<td th:text="${location.stateName}"></td>
+					<td th:text="${location.countryIso3166}"></td>
+					<td th:text="${location.latitude}"></td>
+					<td th:text="${location.longitude}"></td>
+					<td th:text="${location.elevation}"></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div class='main' style="max-width: 553px; padding: 0px; margin: left;">
+		<table class="heavyTable"
+			style="width: 90%; max-width: 500px; height: 93px; border-collapse: collapse; border: 1px solid #38678f; margin: 25px 0 0 25px; background: #eef2f5; border: 1; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); animation: float 5s infinite; text-align: center;">
+			<tbody>
+				<tr>
+					<td
+						style="background: steelblue; height: 25px; width: 7%; font-weight: lighter; text-shadow: 0 1px 0 #38678f; color: white; border: 1px solid #38678f; box-shadow: inset 0px 1px 2px #568ebd; transition: all 0.2s; width: 7%;">TimeZone</td>
+					<td th:text="${weather.timeZone}" style="border: 1"></td>
+				</tr>
+				<tr>
+					<td
+						style="background: steelblue; height: 25px; width: 7%; font-weight: lighter; text-shadow: 0 1px 0 #38678f; color: white; border: 1px solid #38678f; box-shadow: inset 0px 1px 2px #568ebd; transition: all 0.2s; width: 7%;">Weather</td>
+					<td th:text="${weather.weather}" style="border: 1"></td>
+				</tr>
+				<tr>
+					<td
+						style="background: steelblue; height: 25px; width: 7%; font-weight: lighter; text-shadow: 0 1px 0 #38678f; color: white; border: 1px solid #38678f; box-shadow: inset 0px 1px 2px #568ebd; transition: all 0.2s; width: 7%;">Temp</td>
+					<td th:text="${weather.temp}" style="border: 1"></td>
+
+				</tr>
+				<tr>
+					<td
+						style="background: steelblue; height: 25px; width: 7%; font-weight: lighter; text-shadow: 0 1px 0 #38678f; color: white; border: 1px solid #38678f; box-shadow: inset 0px 1px 2px #568ebd; transition: all 0.2s; width: 7%;">Temp_f</td>
+					<td th:text="${weather.temp_f}" style="border: 1"></td>
+
+				</tr>
+				<tr>
+					<td
+						style="background: steelblue; height: 25px; width: 7%; font-weight: lighter; text-shadow: 0 1px 0 #38678f; color: white; border: 1px solid #38678f; box-shadow: inset 0px 1px 2px #568ebd; transition: all 0.2s; width: 7%;">Temp_c</td>
+					<td th:text="${weather.temp_c}" style="border: 1"></td>
+
+				</tr>
+				<tr>
+					<td
+						style="background: steelblue; height: 25px; width: 7%; font-weight: lighter; text-shadow: 0 1px 0 #38678f; color: white; border: 1px solid #38678f; box-shadow: inset 0px 1px 2px #568ebd; transition: all 0.2s; width: 7%;">Humidity</td>
+					<td th:text="${weather.humidity}" style="border: 1"></td>
+
+				</tr>
+				<tr>
+					<td
+						style="background: steelblue; height: 25px; width: 7%; font-weight: lighter; text-shadow: 0 1px 0 #38678f; color: white; border: 1px solid #38678f; box-shadow: inset 0px 1px 2px #568ebd; transition: all 0.2s; width: 7%;">Wind</td>
+					<td th:text="${weather.wind}" style="border: 1"></td>
+				</tr>
+				<tr>
+					<td
+						style="background: steelblue; height: 25px; width: 7%; font-weight: lighter; text-shadow: 0 1px 0 #38678f; color: white; border: 1px solid #38678f; box-shadow: inset 0px 1px 2px #568ebd; transition: all 0.2s; width: 7%;">DewPoint</td>
+					<td th:text="${weather.dewPoint}" style="border: 1"></td>
+				</tr>
+			</tbody>
+		</table>
+		<p>if you want to view Complete history click on Below link</p>
+		<p th:text="${weather.historyURL}"></p>
+	</div>
+	<p>Regards,</p>
+	<p style="font-weight: bold;" align="left">Basant Hota</p>
+</body>
+</html>

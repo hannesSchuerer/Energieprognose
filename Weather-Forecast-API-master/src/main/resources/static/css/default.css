@@ -1,0 +1,143 @@
+table {
+	width: 70%;
+	max-width: 400px;
+	height: 75px;
+	border-collapse: collapse;
+	border: 1px solid #38678f;
+	margin: 33px auto;
+	background: #eef2f5;
+}
+
+th {
+	background: steelblue;
+	height: 37px;
+	width: 10%;
+	font-weight: lighter;
+	text-shadow: 0 1px 0 #38678f;
+	color: white;
+	border: 1px solid #38678f;
+	box-shadow: inset 0px 1px 2px #568ebd;
+	transition: all 0.2s;
+	width: 10%;
+}
+
+tr {
+	border-bottom: 1px solid #cccccc;
+}
+
+tr:last-child {
+	border-bottom: 0px;
+}
+
+td {
+	border-right: 1px solid #cccccc;
+	height: 39px;
+	transition: all 0.2s;
+	text-align: center;
+	padding: 4px;
+}
+
+td:last-child {
+	border-right: 0px;
+}
+
+td.selected {
+	background: #d7e4ef;
+	z-index:;
+}
+
+td input {
+	background: none;
+	outline: none;
+	border: 0;
+	display: table-cell;
+	height: 100%;
+	width: 100%;
+}
+
+td input:focus {
+	box-shadow: 0 1px 0 steelblue;
+	color: steelblue;
+}
+
+::-moz-selection {
+	background: steelblue;
+	color: white;
+}
+
+::selection {
+	background: steelblue;
+	color: white;
+}
+
+.heavyTable {
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+	animation: float 5s infinite;
+}
+
+.main {
+	max-width: 750px;
+	padding: 10px;
+	margin: auto;
+}
+/* The Modal (background) */
+.modal {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	padding-top: 100px; /* Location of the box */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0, 0, 0); /* Fallback color */
+	background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+.modal1 {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	padding-top: 100px; /* Location of the box */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0, 0, 0); /* Fallback color */
+	background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+	background-color: rgba(254, 254, 254, 0.87);
+	margin: auto;
+	padding: 20px;
+	border: 1px solid #888;
+	width: 26%;
+	height: 85px;
+}
+
+/* The Close Button */
+.close {
+	color: #aaaaaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.close:hover, .close:focus {
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+input[type=text] {
+	width: 75%;
+	padding: 12px 27px;
+	margin: -1px 0;
+	box-sizing: border-box;
+	border: 2px solid rgba(37, 10, 10, 0.47);
+	border-radius: 40px;
+}

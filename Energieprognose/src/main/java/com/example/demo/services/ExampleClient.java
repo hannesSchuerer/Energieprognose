@@ -38,7 +38,6 @@ public class ExampleClient extends WebSocketClient {
 	}
 
 
-	public String data;
 	
 /*	public ExampleClient( URI serverUri, Map<String, String> httpHeaders ) {
 
@@ -81,9 +80,7 @@ public class ExampleClient extends WebSocketClient {
 		System.out.println( "Connection closed by " + ( remote ? "remote peer" : "us" ) + " Code: " + code + " Reason: " + reason );
 
 	}
-
-
-
+	
 	@Override
 
 	public void onError( Exception ex ) {
@@ -94,16 +91,13 @@ public class ExampleClient extends WebSocketClient {
 
 	}
 
-
-
 	public static void main( String[] args ) throws URISyntaxException {
 
 //		ExampleClient c = new ExampleClient( new URI( "ws://localhost:8000" )); // more about drafts here: http://github.com/TooTallNate/Java-WebSocket/wiki/Drafts
-		ExampleClient c = new ExampleClient( new URI( "ws://10.210.0.240:8000" )); // more about drafts here: http://github.com/TooTallNate/Java-WebSocket/wiki/Drafts
-		c.setConnectionLostTimeout( 0 );
+		ExampleClient c = new ExampleClient( new URI("ws://10.210.0.240:8000")); // more about drafts here: http://github.com/TooTallNate/Java-WebSocket/wiki/Drafts
+		//ExampleClient c = new ExampleClient( new URI("http://api.openweathermap.org/data/2.5/weather?q=Hallein&appid=2ca1e7f1b8f1ce750da10a52a8c4a4d1"));
+		c.setConnectionLostTimeout( 0 ); 
 		c.connect();
 	}
-
-
 
 }

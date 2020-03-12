@@ -1,0 +1,6 @@
+http://80.120.42.246:82/androidapi/api/verbrauch
+http://80.120.42.246:82/androidapi/api/gesamtverbrauch
+http://80.120.42.246:82/androidapi/api/einzel
+http://80.120.42.246:82/androidapi/api/solar
+http://80.120.42.246:82/androidapi/api/fernwaerme
+http://api.openweathermap.org/data/2.5/weather?q=Hallein&units=metric&appid=2ca1e7f1b8f1ce750da10a52a8c4a4d1

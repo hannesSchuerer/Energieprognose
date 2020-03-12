@@ -1,0 +1,152 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" th:href="@{/css/default.css}" />
+<head>
+<style type="text/css">
+body {
+	background: url("../images/3.jpg");
+	background-size: cover;
+}
+</style>
+</head>
+<body>
+	<h2 align="center">Weather Forecast API</h2>
+	<p th:text="${message}" style="color: green;" align="center"></p>
+	<p th:text="${errorMessage}" style="color: red;" align="center"></p>
+	<!-- Trigger/Open The Modal -->
+	<div align="center">
+		<button id="myBtn" style="color: navy; font-weight: bold;">View
+			Today's Weather</button>
+	</div>
+
+	<!-- The Modal -->
+	<div id="myModal" class="modal1">
+
+		<!-- Modal content -->
+		<div class="modal-content">
+			<span class="close">&times;</span>
+
+			<form action="/weather/api/getWeather">
+				<div align="center" style="padding: 10px; text-align: center;">
+					<input type="text" name="location" placeholder="Enter City Name" />
+				</div>
+				<center>
+					<input type="submit" value="search" />
+				</center>
+			</form>
+		</div>
+	</div>
+
+	<div class='main'>
+		<table class="heavyTable">
+			<thead>
+				<tr th:each="response : ${responses}">
+					<th th:text="${response.header1}"></th>
+					<th th:text="${response.header2}"></th>
+					<th th:text="${response.header3}"></th>
+					<th th:text="${response.header4}"></th>
+					<th th:text="${response.header5}"></th>
+					<th th:text="${response.header6}"></th>
+					<th th:text="${response.header7}"></th>
+					<th>Notification</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="location : ${locations}">
+					<td th:text="${location.city}"></td>
+					<td th:text="${location.state}"></td>
+					<td th:text="${location.stateName}"></td>
+					<td th:text="${location.countryIso3166}"></td>
+					<td th:text="${location.latitude}"></td>
+					<td th:text="${location.longitude}"></td>
+					<td th:text="${location.elevation}"></td>
+					<td><img th:src="@{/images/emailIcon.jpg}" height="50px"
+						width="70px" id="myBtn1" /></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<br />
+	<!-- 	<br /> -->
+	<div id="mySearch" class="modal1">
+		<!-- Modal content -->
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			<form action="/weather/api/sendEmail">
+				<div align="center" style="padding: 10px; text-align: center;">
+					<input type="text" name="email" placeholder="Enter Email(@)" />
+				</div>
+				<center>
+					<input type="submit" value="Subscribe" />
+				</center>
+			</form>
+
+		</div>
+
+	</div>
+	<div class='main'>
+		<table class="heavyTable">
+			<thead>
+				<tr th:each="response : ${responses}">
+					<th th:text="${response.header8}"></th>
+					<th th:text="${response.header9}"></th>
+					<th th:text="${response.header10}"></th>
+					<th th:text="${response.header11}"></th>
+					<th th:text="${response.header12}"></th>
+					<th th:text="${response.header13}"></th>
+					<th th:text="${response.header14}"></th>
+					<th th:text="${response.header15}"></th>
+					<th th:text="${response.header16}"></th>
+					<th th:text="${response.header17}"></th>
+					<th th:text="${response.header18}"></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="weather : ${weathers}">
+					<td th:text="${weather.timeZone}"></td>
+					<td th:text="${weather.weather}"></td>
+					<td th:text="${weather.temp}"></td>
+					<td th:text="${weather.temp_f}"></td>
+					<td th:text="${weather.temp_c}"></td>
+					<td th:text="${weather.humidity}"></td>
+					<td th:text="${weather.wind}"></td>
+					<td th:text="${weather.dewPoint}"></td>
+					<td th:text="${weather.searchDate}"></td>
+					<td th:text="${weather.time}"></td>
+					<td><a th:href="${weather.historyURL}">more..</a></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<script>
+		var modal = document.getElementById('myModal');
+		var btn = document.getElementById("myBtn");
+		var span = document.getElementsByClassName("close")[0];
+		btn.onclick = function() {
+			modal.style.display = "block";
+		}
+		span.onclick = function() {
+			modal.style.display = "none";
+		}
+		window.onclick = function(event) {
+			if (event.target == modal) {
+				modal.style.display = "none";
+			}
+		}
+		//2
+		var searchModel = document.getElementById('mySearch');
+		var btn1 = document.getElementById("myBtn1");
+		var span = document.getElementsByClassName("close")[0];
+		btn1.onclick = function() {
+			searchModel.style.display = "block";
+		}
+		span.onclick = function() {
+			searchModel.style.display = "none";
+		}
+		window.onclick = function(event) {
+			if (event.target == searchModel) {
+				searchModel.style.display = "none";
+			}
+		}
+	</script>
+</body>
+</html>
