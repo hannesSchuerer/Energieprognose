@@ -17,17 +17,19 @@
 					text: "Powerconsumption"
 				},
 				axisX: {
-					valueFormatString: "HH:mm"
+					valueFormatString: "HH:mm:ss"
 				},
 				axisY: {
+					includeZero: false,
+					interval: 100,
 					title: "Power (in kwh)",
 					suffix: " kwh"
 				},
 				data: [{
 					type: "line",
 					xValueType: "dateTime",
-					xValueFormatString: "HH:mm",
-					yValueFormatString: "#,#00 kwh",
+					xValueFormatString: "HH:mm:ss",
+					yValueFormatString: "#.##0 kwh",
 					dataPoints: dps[0]
 				}]
 			});
@@ -47,7 +49,6 @@
 			</c:forEach> 
 			 
 			chart.render();
-			 
 			}
 			</script>
 	</head>

@@ -1,31 +1,66 @@
 package com.example.demo.model;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import com.example.demo.services.ReadJSON;
+
  
-public class CanvasjsChartData {
+public class CanvasjsChartData extends Thread{
  
+	private ReadJSON rj;
 	static Map<Object,Object> map = null;
 	static List<List<Map<Object,Object>>> list = new ArrayList<List<Map<Object,Object>>>();
 	static List<Map<Object,Object>> dataPoints1 = new ArrayList<Map<Object,Object>>();
 	
+	long time = System.currentTimeMillis();
+	
 	static {
-		map = new HashMap<Object,Object>(); map.put("x", 1483209000000L); map.put("y", 7);dataPoints1.add(map);
-		map = new HashMap<Object,Object>(); map.put("x", 1485887400000L); map.put("y", 6);dataPoints1.add(map);
-		map = new HashMap<Object,Object>(); map.put("x", 1488306600000L); map.put("y", 6);dataPoints1.add(map);
-		map = new HashMap<Object,Object>(); map.put("x", 1490985000000L); map.put("y", 9);dataPoints1.add(map);
-		map = new HashMap<Object,Object>(); map.put("x", 1493577000000L); map.put("y", 11);dataPoints1.add(map);
-		map = new HashMap<Object,Object>(); map.put("x", 1496255400000L); map.put("y", 14);dataPoints1.add(map);
-		map = new HashMap<Object,Object>(); map.put("x", 1498847400000L); map.put("y", 17);dataPoints1.add(map);
-		map = new HashMap<Object,Object>(); map.put("x", 1501525800000L); map.put("y", 18);dataPoints1.add(map);
-		map = new HashMap<Object,Object>(); map.put("x", 1504204200000L); map.put("y", 17);dataPoints1.add(map);
-		map = new HashMap<Object,Object>(); map.put("x", 1506796200000L); map.put("y", 15);dataPoints1.add(map);
-		map = new HashMap<Object,Object>(); map.put("x", 1509474600000L); map.put("y", 12);dataPoints1.add(map);
-		map = new HashMap<Object,Object>(); map.put("x", 1512066600000L); map.put("y", 9);dataPoints1.add(map);
- 
+		
 		list.add(dataPoints1);
+		//System.out.println(list);
+	}
+	
+	public void run() {
+		try {
+			System.out.println("Thread " + Thread.currentThread().getId() + " is running");
+		}catch (Exception e) {
+			System.out.println("Exception is caught");
+		}
+		
+		JSONObject powerDataJson;
+		int power = 0;
+		
+		while(true) {
+			try {
+				rj = new ReadJSON("http://80.120.42.246:82/androidapi/api/verbrauch");
+				rj.openConnection();
+				String powerDataString = rj.getUrlString();
+				powerDataJson = new JSONObject(powerDataString);
+				power = powerDataJson.getInt("tagesVerbrauch");
+				System.out.println(power);
+				time = System.currentTimeMillis();
+				map = new HashMap<Object,Object>(); map.put("x", time); map.put("y", power);dataPoints1.add(map);
+				Thread.sleep(60000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (JSONException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+		}
+		
 	}
  
 	public static List<List<Map<Object, Object>>> getCanvasjsDataList() {
