@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.net.URISyntaxException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
+import java.util.Map;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -18,6 +20,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.example.demo.dao.EnergydataDao;
 import com.example.demo.model.Energydata;
 import com.example.demo.services.ReadJSON;
+import com.example.demo.services.CanvasjsChartService;
 
 
 @Controller
@@ -31,9 +34,15 @@ public class TestController{
         this.energydataDAO = energydataDAO;
     }
 	
+	@Autowired
+	private CanvasjsChartService canvasjsChartService;
+	
 	@RequestMapping("/")
 	public String welcome(ModelMap model) throws URISyntaxException, IOException, JSONException
 	{
+		List<List<Map<Object, Object>>> canvasjsDataList = canvasjsChartService.getCanvasjsChartData();
+		model.addAttribute("dataPointsList", canvasjsDataList);
+
 		rj = new ReadJSON("http://api.openweathermap.org/data/2.5/weather?q=Hallein&units=metric&appid=2ca1e7f1b8f1ce750da10a52a8c4a4d1");
 		rj.openConnection();
 		String weatherDataString = rj.getUrlString();
