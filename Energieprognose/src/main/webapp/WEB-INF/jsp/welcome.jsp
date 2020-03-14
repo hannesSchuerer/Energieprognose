@@ -14,14 +14,14 @@
 				theme: "light2", // "light1", "dark1", "dark2"
 				animationEnabled: true,
 				title: {
-					text: "Powerconsumption"
+					text: "(Total)Powerconsumption"
 				},
 				axisX: {
 					valueFormatString: "HH:mm:ss"
 				},
 				axisY: {
 					includeZero: false,
-					interval: 100,
+					interval: 500,
 					title: "Power (in kwh)",
 					suffix: " kwh"
 				},

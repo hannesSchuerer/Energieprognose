@@ -6,6 +6,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -34,16 +35,17 @@ public class CanvasjsChartData extends Thread{
 			System.out.println("Exception is caught");
 		}
 		
-		JSONObject powerDataJson;
+		JSONArray powerDataJson;
 		int power = 0;
 		
 		while(true) {
 			try {
-				rj = new ReadJSON("http://80.120.42.246:82/androidapi/api/verbrauch");
+				rj = new ReadJSON("http://80.120.42.246:82/androidapi/api/gesamtverbrauch");
 				rj.openConnection();
 				String powerDataString = rj.getUrlString();
-				powerDataJson = new JSONObject(powerDataString);
-				power = powerDataJson.getInt("tagesVerbrauch");
+				powerDataJson = new JSONArray(powerDataString);
+				System.out.println(powerDataJson.length());
+				power = Integer.parseInt(powerDataJson.getJSONObject(powerDataJson.length()-1).getString("wertGesamt"));
 				System.out.println(power);
 				time = System.currentTimeMillis();
 				map = new HashMap<Object,Object>(); map.put("x", time); map.put("y", power);dataPoints1.add(map);
