@@ -24,7 +24,7 @@ public class Energydata {
 	@Column(name = "DATE_TIME", nullable = true)
 	private Date dateTime;
 	
-	@Column(name = "INTEGER", nullable = true)
+	@Column(name = "COS_PHI", nullable = true)
 	private Integer cosPhi;
 	
 	@Column(name = "POWER", nullable = true)
