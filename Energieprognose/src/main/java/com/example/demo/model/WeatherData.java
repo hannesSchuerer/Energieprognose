@@ -31,7 +31,7 @@ public class WeatherData {
     private String description;
 
     @Column(name = "TEMPERATURE", nullable = true)
-    private Double temperature;
+    private Integer temperature;
 
     @Temporal(TemporalType.DATE)
     @Column(name = "SUNRISE_DATE", nullable = true)
@@ -73,11 +73,11 @@ public class WeatherData {
         this.description = description;
     }
 
-    public Double getTemperature() {
+    public Integer getTemperature() {
         return temperature;
     }
 
-    public void setTemperature(Double temperature) {
+    public void setTemperature(Integer temperature) {
         this.temperature = temperature;
     }
 
