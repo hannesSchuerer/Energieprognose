@@ -12,7 +12,7 @@ import javax.persistence.TemporalType;
 import javax.persistence.Column;
 
 @Entity
-@Table(name = "WEATHER_DATA")
+@Table(name = "Weather_Data")
 public class WeatherData {
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
@@ -21,7 +21,7 @@ public class WeatherData {
     private Long id;
 
     @Temporal(TemporalType.DATE)
-    @Column(name = "CURRENT_TIME", nullable = true)
+    @Column(name = "TIME", nullable = true)
     private Date currentTime;
 
     @Column(name = "WEATHER", nullable = true)

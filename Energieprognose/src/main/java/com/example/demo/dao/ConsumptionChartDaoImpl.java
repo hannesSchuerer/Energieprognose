@@ -5,15 +5,14 @@ import java.util.Map;
 
 import org.springframework.stereotype.Repository;
 
-import com.example.demo.dao.CanvasjsChartDao;
-import com.example.demo.model.CanvasjsChartData;
+import com.example.demo.model.ConsumptionChartData;
  
 @Repository
-public class CanvasjsChartDaoImpl implements CanvasjsChartDao {
+public class ConsumptionChartDaoImpl implements ConsumptionChartDao {
  
 	@Override
 	public List<List<Map<Object, Object>>> getCanvasjsChartData() {
-		return CanvasjsChartData.getCanvasjsDataList();
+		return ConsumptionChartData.getCanvasjsDataList();
 	}
  
 } 

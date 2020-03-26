@@ -7,20 +7,18 @@ import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
+import com.example.demo.services.GeneratingChartService;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.stereotype.Service;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.example.demo.dao.EnergydataDao;
 import com.example.demo.model.Energydata;
 import com.example.demo.services.ReadJSON;
-import com.example.demo.services.CanvasjsChartService;
+import com.example.demo.services.ConsumptionChartService;
 
 
 @Controller
@@ -35,13 +33,18 @@ public class TestController{
     }
 	
 	@Autowired
-	private CanvasjsChartService canvasjsChartService;
+	private ConsumptionChartService consumptionChartService;
+	@Autowired
+	private GeneratingChartService generatingChartService;
 	
 	@RequestMapping("/")
 	public String welcome(ModelMap model) throws URISyntaxException, IOException, JSONException
 	{
-		List<List<Map<Object, Object>>> canvasjsDataList = canvasjsChartService.getCanvasjsChartData();
-		model.addAttribute("dataPointsList", canvasjsDataList);
+		List<List<Map<Object, Object>>> consumtionJsDataList = consumptionChartService.getCanvasjsChartData();
+		model.addAttribute("consumtionDataPointsList", consumtionJsDataList);
+
+		List<List<Map<Object, Object>>> generatingjsDataList = generatingChartService.getGenerationChartData();
+		model.addAttribute("generatingDataPointsList", generatingjsDataList);
 
 		rj = new ReadJSON("http://api.openweathermap.org/data/2.5/weather?q=Hallein&units=metric&appid=2ca1e7f1b8f1ce750da10a52a8c4a4d1");
 		rj.openConnection();

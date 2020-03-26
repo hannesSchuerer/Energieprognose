@@ -13,7 +13,7 @@ import org.json.JSONObject;
 import com.example.demo.services.ReadJSON;
 
  
-public class CanvasjsChartData extends Thread{
+public class ConsumptionChartData extends Thread{
  
 	private ReadJSON rj;
 	static Map<Object,Object> map = null;
@@ -25,9 +25,9 @@ public class CanvasjsChartData extends Thread{
 	static {
 		
 		list.add(dataPoints1);
-		//System.out.println(list);
+		System.out.println("Consumption");
 	}
-	
+	@Override
 	public void run() {
 		try {
 			System.out.println("Thread " + Thread.currentThread().getId() + " is running");
