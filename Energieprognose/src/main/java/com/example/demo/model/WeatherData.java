@@ -7,8 +7,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
 import javax.persistence.Column;
 
 @Entity
@@ -20,9 +18,8 @@ public class WeatherData {
     @Column(name = "ID", nullable = false)
     private Long id;
 
-    @Temporal(TemporalType.DATE)
     @Column(name = "TIME", nullable = true)
-    private Date currentTime;
+    private String currentTime;
 
     @Column(name = "WEATHER", nullable = true)
     private String weather;
@@ -31,15 +28,13 @@ public class WeatherData {
     private String description;
 
     @Column(name = "TEMPERATURE", nullable = true)
-    private Integer temperature;
+    private Double temperature;
 
-    @Temporal(TemporalType.DATE)
     @Column(name = "SUNRISE_DATE", nullable = true)
-    private Date sunriseDate;
+    private String sunriseDate;
 
-    @Temporal(TemporalType.DATE)
     @Column(name = "SUNSET_DATE", nullable = true)
-    private Date sunsetDate;
+    private String sunsetDate;
 
     public Long getId() {
         return id;
@@ -49,11 +44,11 @@ public class WeatherData {
         this.id = id;
     }
 
-    public Date getCurrentTime() {
+    public String getCurrentTime() {
         return currentTime;
     }
 
-    public void setCurrentTime(Date currentTime) {
+    public void setCurrentTime(String currentTime) {
         this.currentTime = currentTime;
     }
 
@@ -73,27 +68,27 @@ public class WeatherData {
         this.description = description;
     }
 
-    public Integer getTemperature() {
+    public Double getTemperature() {
         return temperature;
     }
 
-    public void setTemperature(Integer temperature) {
+    public void setTemperature(Double temperature) {
         this.temperature = temperature;
     }
 
-    public Date getSunriseDate() {
+    public String getSunriseDate() {
         return sunriseDate;
     }
 
-    public void setSunriseDate(Date sunriseDate) {
+    public void setSunriseDate(String sunriseDate) {
         this.sunriseDate = sunriseDate;
     }
 
-    public Date getSunsetDate() {
+    public String getSunsetDate() {
         return sunsetDate;
     }
 
-    public void setSunsetDate(Date sunsetDate) {
+    public void setSunsetDate(String sunsetDate) {
         this.sunsetDate = sunsetDate;
     }
 }
