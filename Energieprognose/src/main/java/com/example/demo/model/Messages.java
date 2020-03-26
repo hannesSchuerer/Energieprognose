@@ -1,6 +1,6 @@
 package com.example.demo.model;
 
-import java.sql.Timestamp;
+import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -15,7 +15,7 @@ public class Messages {
 	private Long id;
 	private String messageTitle;
 	private String messageText;
-	private Timestamp dateTime;
+	private Date dateTime;
 	private Integer idFacility;
 	
 }

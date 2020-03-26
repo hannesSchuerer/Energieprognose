@@ -1,6 +1,5 @@
 package com.example.demo.model;
 
-import java.sql.Time;
 import java.util.Date;
 
 import javax.persistence.Entity;
@@ -13,7 +12,7 @@ import javax.persistence.TemporalType;
 import javax.persistence.Column;
 
 @Entity
-@Table(name = "WEATHERDATA")
+@Table(name = "WEATHER_DATA")
 public class WeatherData {
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
@@ -21,9 +20,9 @@ public class WeatherData {
     @Column(name = "ID", nullable = false)
     private Long id;
 
-    @Temporal(TemporalType.TIME)
+    @Temporal(TemporalType.DATE)
     @Column(name = "CURRENT_TIME", nullable = true)
-    private Time currentTime;
+    private Date currentTime;
 
     @Column(name = "WEATHER", nullable = true)
     private String weather;
@@ -32,13 +31,69 @@ public class WeatherData {
     private String description;
 
     @Column(name = "TEMPERATURE", nullable = true)
-    private Integer temperature;
+    private Double temperature;
 
-    @Temporal(TemporalType.TIME)
+    @Temporal(TemporalType.DATE)
     @Column(name = "SUNRISE_DATE", nullable = true)
-    private Time sunriseDate;
+    private Date sunriseDate;
 
-    @Temporal(TemporalType.TIME)
+    @Temporal(TemporalType.DATE)
     @Column(name = "SUNSET_DATE", nullable = true)
-    private Time sunsetDate;
+    private Date sunsetDate;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Date getCurrentTime() {
+        return currentTime;
+    }
+
+    public void setCurrentTime(Date currentTime) {
+        this.currentTime = currentTime;
+    }
+
+    public String getWeather() {
+        return weather;
+    }
+
+    public void setWeather(String weather) {
+        this.weather = weather;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public Double getTemperature() {
+        return temperature;
+    }
+
+    public void setTemperature(Double temperature) {
+        this.temperature = temperature;
+    }
+
+    public Date getSunriseDate() {
+        return sunriseDate;
+    }
+
+    public void setSunriseDate(Date sunriseDate) {
+        this.sunriseDate = sunriseDate;
+    }
+
+    public Date getSunsetDate() {
+        return sunsetDate;
+    }
+
+    public void setSunsetDate(Date sunsetDate) {
+        this.sunsetDate = sunsetDate;
+    }
 }

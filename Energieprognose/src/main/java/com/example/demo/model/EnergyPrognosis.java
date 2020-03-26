@@ -1,6 +1,6 @@
 package com.example.demo.model;
 
-import java.sql.Timestamp;
+import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -13,9 +13,9 @@ public class EnergyPrognosis {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	
 	private Long id;
-	private Timestamp prognosedTimestamp;
+	private Date prognosedTimestamp;
 	private Integer power;
-	private Timestamp lastPrognosis;
+	private Date lastPrognosis;
 	private Integer cosphi;
 	private Integer idFacility;
 }

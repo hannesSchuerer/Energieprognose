@@ -27,7 +27,7 @@ public class EnergydataService implements ApplicationRunner{
 	 @Override
 	    public void run(ApplicationArguments args) throws Exception {
 	        long count = energydataDAO.count();
-	 
+
 	        if (count == 0) {
 	            Energydata e1 = new Energydata();
 	 
