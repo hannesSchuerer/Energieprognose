@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.Map;
 
 import com.example.demo.services.GeneratingChartService;
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,7 +27,7 @@ public class TestController{
 	
 	private EnergydataDao energydataDAO;
 	private ReadJSON rj;
-	
+	JSONArray powerDataJson;
 	@Autowired
 	public TestController(EnergydataDao energydataDAO) {
         this.energydataDAO = energydataDAO;
@@ -45,6 +46,13 @@ public class TestController{
 
 		List<List<Map<Object, Object>>> generatingjsDataList = generatingChartService.getGenerationChartData();
 		model.addAttribute("generatingDataPointsList", generatingjsDataList);
+
+		rj = new ReadJSON("http://80.120.42.246:82/androidapi/api/gesamtverbrauch");
+		rj.openConnection();
+		String powerDataString = rj.getUrlString();
+		powerDataJson = new JSONArray(powerDataString);
+		System.out.println(powerDataJson.length());
+		String message =powerDataJson.getJSONObject(powerDataJson.length()-1).getString("errMsg");
 
 		rj = new ReadJSON("http://api.openweathermap.org/data/2.5/weather?q=Hallein&units=metric&appid=2ca1e7f1b8f1ce750da10a52a8c4a4d1");
 		rj.openConnection();
@@ -70,6 +78,7 @@ public class TestController{
 		model.put("temperature", weatherDataJson.getJSONObject("main").getDouble("temp"));
 		model.put("sunrise", sunriseTime);
 		model.put("sunset", sunsetTime);
+		model.put("message", message);
 		rj.closeConnection();
 		
 		return "welcome";

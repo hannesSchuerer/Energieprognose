@@ -40,40 +40,40 @@ public class WeatherDataService extends Thread implements ApplicationRunner{
 	    public void run() {
 			long count = weatherDataDAO.count();
 			while (true) {
-				if (count == 0) {
-					try {
-						//stop();
-						SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
-						rj = new ReadJSON("http://api.openweathermap.org/data/2.5/weather?q=Hallein&units=metric&appid=2ca1e7f1b8f1ce750da10a52a8c4a4d1");
-						rj.openConnection();
-						String weatherDataString = rj.getUrlString();
-						JSONObject weatherDataJson = new JSONObject(weatherDataString);
 
-						WeatherData weatherData = new WeatherData();
+				try {
+					//stop();
+					SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
+					rj = new ReadJSON("http://api.openweathermap.org/data/2.5/weather?q=Hallein&units=metric&appid=2ca1e7f1b8f1ce750da10a52a8c4a4d1");
+					rj.openConnection();
+					String weatherDataString = rj.getUrlString();
+					JSONObject weatherDataJson = new JSONObject(weatherDataString);
 
-						weatherData.setTemperature(weatherDataJson.getJSONObject("main").getDouble("temp"));
-						weatherData.setDescription(weatherDataJson.getJSONArray("weather").getJSONObject(0).getString("description"));
-						weatherData.setWeather(weatherDataJson.getJSONArray("weather").getJSONObject(0).getString("main"));
-						Date sunriseTimeDate = new Date(weatherDataJson.getJSONObject("sys").getLong("sunrise")*1000);
-						Date sunsetTimeDate = new Date(weatherDataJson.getJSONObject("sys").getLong("sunset")*1000);
-						String sunriseTime = dateFormat.format(sunriseTimeDate);
-						String sunsetTime = dateFormat.format(sunsetTimeDate);
-						String currentTime = dateFormat.format(System.currentTimeMillis());
-						weatherData.setSunriseDate(sunriseTime);
-						weatherData.setSunsetDate(sunsetTime);
-						weatherData.setCurrentTime(currentTime);
+					WeatherData weatherData = new WeatherData();
 
-						sleep(10000);
-						weatherDataDAO.save(weatherData);
+					weatherData.setTemperature(weatherDataJson.getJSONObject("main").getDouble("temp"));
+					weatherData.setDescription(weatherDataJson.getJSONArray("weather").getJSONObject(0).getString("description"));
+					weatherData.setWeather(weatherDataJson.getJSONArray("weather").getJSONObject(0).getString("main"));
+					Date sunriseTimeDate = new Date(weatherDataJson.getJSONObject("sys").getLong("sunrise")*1000);
+					Date sunsetTimeDate = new Date(weatherDataJson.getJSONObject("sys").getLong("sunset")*1000);
+					String sunriseTime = dateFormat.format(sunriseTimeDate);
+					String sunsetTime = dateFormat.format(sunsetTimeDate);
+					String currentTime = dateFormat.format(System.currentTimeMillis());
+					weatherData.setSunriseDate(sunriseTime);
+					weatherData.setSunsetDate(sunsetTime);
+					weatherData.setCurrentTime(currentTime);
 
-					} catch (IOException e) {
+					sleep(10000);
+					weatherDataDAO.save(weatherData);
 
-					} catch (JSONException e) {
+				} catch (IOException e) {
 
-					} catch (InterruptedException e){
+				} catch (JSONException e) {
 
-					}
+				} catch (InterruptedException e){
+
 				}
+
 			}
 		}
 }

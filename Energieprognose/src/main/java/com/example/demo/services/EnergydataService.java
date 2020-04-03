@@ -28,16 +28,16 @@ public class EnergydataService implements ApplicationRunner{
 	    public void run(ApplicationArguments args) throws Exception {
 	        long count = energydataDAO.count();
 
-	        if (count == 0) {
-	            Energydata e1 = new Energydata();
+	        Energydata e1 = new Energydata();
 	 
-	            e1.setCosPhi(10000);
-	            Date d1 = df.parse("1980-12-20");
-	            e1.setDateTime(d1);
-	 
-	            energydataDAO.save(e1);
+	        e1.setCosPhi(2);
+	        Date d1 = df.parse("2020-04-04");
+	        e1.setDateTime(d1);
+	        e1.setPower(24000);
+	        e1.setIdFacility(1L);
+	        energydataDAO.save(e1);
 	      
-	        }
+
 	 
 	    }
 	 

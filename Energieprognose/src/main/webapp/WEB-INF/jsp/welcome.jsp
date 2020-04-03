@@ -113,6 +113,7 @@
 	 			<th>Temperature</th>
 	 			<th>Sunrise</th>
 	 			<th>Sunset</th>
+				<th>Message</th>
 	 		</tr>
 	 		<tr>
 	 			<td>${currentTime}</td>
@@ -121,6 +122,7 @@
 	 			<td>${temperature}°C</td>
 	 			<td>${sunrise}</td>
 	 			<td>${sunset}</td>
+				<td>${message}</td>
 	 		</tr>
 	 	</table>
 	</body>
