@@ -16,22 +16,15 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.example.demo.dao.EnergydataDao;
-import com.example.demo.model.Energydata;
 import com.example.demo.services.ReadJSON;
 import com.example.demo.services.ConsumptionChartService;
 
 
 @Controller
 public class TestController{
-	
-	private EnergydataDao energydataDAO;
+
 	private ReadJSON rj;
 	JSONArray powerDataJson;
-	@Autowired
-	public TestController(EnergydataDao energydataDAO) {
-        this.energydataDAO = energydataDAO;
-    }
 	
 	@Autowired
 	private ConsumptionChartService consumptionChartService;
@@ -65,12 +58,7 @@ public class TestController{
 		String currentTime = dateFormat.format(currentTimeDate);
 		String sunriseTime = dateFormat.format(sunriseTimeDate);
 		String sunsetTime = dateFormat.format(sunsetTimeDate);
-		
-		Iterable<Energydata> all = energydataDAO.findAll();
-		 
-	    StringBuilder sb = new StringBuilder();
-	 
-	    all.forEach(p -> sb.append(p.getCosPhi() + "<br>"));
+
 		
 	    model.put("currentTime", currentTime);
 		model.put("main", weatherDataJson.getJSONArray("weather").getJSONObject(0).getString("main"));

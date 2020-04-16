@@ -6,6 +6,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import com.example.demo.services.ConsumptionJson;
 import com.example.demo.services.ReadFrequenz;
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -15,8 +16,7 @@ import com.example.demo.services.ReadJSON;
 
  
 public class ConsumptionChartData extends Thread{
- 
-	private ReadJSON rj;
+
 	static Map<Object,Object> map = null;
 	static List<List<Map<Object,Object>>> list = new ArrayList<List<Map<Object,Object>>>();
 	static List<Map<Object,Object>> dataPoints1 = new ArrayList<Map<Object,Object>>();
@@ -41,10 +41,8 @@ public class ConsumptionChartData extends Thread{
 		
 		while(true) {
 			try {
-				rj = new ReadJSON("http://80.120.42.246:82/androidapi/api/gesamtverbrauch");
-				rj.openConnection();
-				String powerDataString = rj.getUrlString();
-				powerDataJson = new JSONArray(powerDataString);
+
+				powerDataJson = ConsumptionJson.getPowerDataJson();
 				System.out.println(powerDataJson.length());
 				power = Integer.parseInt(powerDataJson.getJSONObject(powerDataJson.length()-1).getString("wertGesamt"));
 				System.out.println(power);
@@ -55,9 +53,6 @@ public class ConsumptionChartData extends Thread{
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			} catch (JSONException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}

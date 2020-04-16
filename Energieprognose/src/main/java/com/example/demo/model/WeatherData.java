@@ -18,8 +18,17 @@ public class WeatherData {
     @Column(name = "ID", nullable = false)
     private Long id;
 
+    @Column(name = "DATE", nullable = true)
+    private String currentDate;
+
     @Column(name = "TIME", nullable = true)
     private String currentTime;
+
+    @Column(name = "POWERCONSUMPTION", nullable = true)
+    private Integer powerConsumption;
+
+    @Column(name = "POWERGENERATION", nullable = true)
+    private Integer powerGeneration;
 
     @Column(name = "WEATHER", nullable = true)
     private String weather;
@@ -35,6 +44,9 @@ public class WeatherData {
 
     @Column(name = "SUNSET_DATE", nullable = true)
     private String sunsetDate;
+
+    @Column(name = "MESSAGE", nullable = true)
+    private String message;
 
     public Long getId() {
         return id;
@@ -91,4 +103,20 @@ public class WeatherData {
     public void setSunsetDate(String sunsetDate) {
         this.sunsetDate = sunsetDate;
     }
+
+    public String getCurrentDate() { return currentDate; }
+
+    public void setCurrentDate(String currentDate) { this.currentDate = currentDate; }
+
+    public Integer getPowerConsumption() { return powerConsumption; }
+
+    public void setPowerConsumption(Integer powerConsumption) { this.powerConsumption = powerConsumption; }
+
+    public Integer getPowerGeneration() { return powerGeneration; }
+
+    public void setPowerGeneration(Integer powerGeneration) { this.powerGeneration = powerGeneration; }
+
+    public String getMessage() { return message; }
+
+    public void setMessage(String message) { this.message = message; }
 }

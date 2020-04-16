@@ -2,6 +2,7 @@
 	pageEncoding="ISO-8859-1"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page import = "java.io.*,java.util.*" %>
+<%@ page import="com.example.demo.services.ReadFrequenz" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 	<head>
@@ -100,7 +101,7 @@
 	</head>
 	<body>
 		<%
-			response.setIntHeader("Refresh", 60);
+			response.setIntHeader("Refresh", ReadFrequenz.time);
 		%>
 		<div id="consumtionChartContainer" style="height: 370px; width: 100%;"></div>
 		<div id="generatingChartContainer" style="height: 370px; width: 100%;"></div>
