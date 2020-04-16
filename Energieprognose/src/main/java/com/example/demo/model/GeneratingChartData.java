@@ -1,5 +1,6 @@
 package com.example.demo.model;
 
+import com.example.demo.services.ReadFrequenz;
 import com.example.demo.services.ReadJSON;
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -21,7 +22,6 @@ public class GeneratingChartData extends Thread{
 	long time = System.currentTimeMillis();
 	
 	static {
-		
 		list.add(dataPoints1);
 		System.out.println("Generation");
 	}
@@ -47,7 +47,7 @@ public class GeneratingChartData extends Thread{
 				System.out.println(power);
 				time = System.currentTimeMillis();
 				map = new HashMap<Object,Object>(); map.put("x", time); map.put("y", power);dataPoints1.add(map);
-				Thread.sleep(60000);
+				Thread.sleep(ReadFrequenz.time);
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

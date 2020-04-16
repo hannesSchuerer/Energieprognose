@@ -1,7 +1,9 @@
 package com.example.demo.services;
 
+import java.io.IOException;
 import java.sql.Timestamp;
 import java.text.DateFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
  
@@ -13,32 +15,46 @@ import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
 
 @Component
-public class EnergydataService implements ApplicationRunner{
+public class EnergydataService extends Thread implements ApplicationRunner{
 
 	 private EnergydataDao energydataDAO;
 	 
 	 private static final DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
 	
 	 @Autowired
-	    public EnergydataService(EnergydataDao energydataDAO) {
+	 public EnergydataService(EnergydataDao energydataDAO) {
 	        this.energydataDAO = energydataDAO;
 	    }
 	 
 	 @Override
-	    public void run(ApplicationArguments args) throws Exception {
-	        long count = energydataDAO.count();
+	 public void run(ApplicationArguments args) throws Exception {
+	 	start();
+	 }
 
-	        Energydata e1 = new Energydata();
-	 
-	        e1.setCosPhi(2);
-	        Date d1 = df.parse("2020-04-04");
-	        e1.setDateTime(d1);
-	        e1.setPower(24000);
-	        e1.setIdFacility(1L);
-	        energydataDAO.save(e1);
-	      
+	 @Override
+	 public void run(){
+	 	while(true){
 
-	 
-	    }
-	 
+	 		try{
+				Energydata e1 = new Energydata();
+
+				e1.setCosPhi(2);
+				Date d1 = df.parse("2020-04-04");
+				e1.setDateTime(d1);
+				e1.setPower(24000);
+				e1.setIdFacility(1L);
+				energydataDAO.save(e1);
+
+				sleep(ReadFrequenz.time);
+
+			}catch (InterruptedException e){
+
+			}catch(ParseException e){
+
+			}
+
+		}
+	 }
+
+
 }

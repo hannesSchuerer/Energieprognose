@@ -38,7 +38,6 @@ public class WeatherDataService extends Thread implements ApplicationRunner{
 
 	    @Override
 	    public void run() {
-			long count = weatherDataDAO.count();
 			while (true) {
 
 				try {
@@ -62,9 +61,9 @@ public class WeatherDataService extends Thread implements ApplicationRunner{
 					weatherData.setSunriseDate(sunriseTime);
 					weatherData.setSunsetDate(sunsetTime);
 					weatherData.setCurrentTime(currentTime);
-
-					sleep(10000);
 					weatherDataDAO.save(weatherData);
+
+					sleep(ReadFrequenz.time);
 
 				} catch (IOException e) {
 
